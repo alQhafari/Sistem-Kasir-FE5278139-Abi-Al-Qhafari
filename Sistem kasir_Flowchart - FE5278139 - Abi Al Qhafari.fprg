@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ABI ALQHAFARI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-15 06:32:04 AM"/>
+        <attribute name="created" value="QUJJIEFMUUhBRkFSSTtMRU5PVk8tSURFQVBBREc7MjAyMy0wMy0xNTswNjoxNzoxOCBBTTszMjI0"/>
+        <attribute name="edited" value="QUJJIEFMUUhBRkFSSTtMRU5PVk8tSURFQVBBREc7MjAyMy0wMy0xNTswNjozMjowNCBBTTsyOzMzMjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Customer ke kasir&quot;" newline="True"/>
+            <output expression="&quot;Kasir scan belanjaan&quot;" newline="True"/>
+            <declare name="totalBelanjaan, jmlhBelanjaan, hargaBarang, persenDiskon" type="Integer" array="False" size=""/>
+            <declare name="diskon" type="Boolean" array="False" size=""/>
+            <while expression="jmlhBelanjaan &gt; 0">
+                <assign variable="totalBelanjaan" expression="totalBelanjaan + hargaBarang"/>
+                <assign variable="jmlhBelanjaan" expression="jmlhBelanjaan - 1"/>
+            </while>
+            <if expression="diskon == true">
+                <then>
+                    <assign variable="totalBelanjaan" expression="totalBelanjaan - (persenDiskon * totalBelanjaan)"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Total Belanjaan = &quot; + totalBelanjaan" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

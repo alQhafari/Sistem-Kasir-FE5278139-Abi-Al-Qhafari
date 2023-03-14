@@ -1,0 +1,15 @@
+Tampilkan "Customer ke kasir"
+Tampilkan "Kasir scan belanjaan"
+buat variabel Integer totalBelanjaan, jmlhBelanjaan, hargaBarang, persenDiskon
+buat variabel Boolean diskon
+
+Selama jmlhBelanjaan > 0
+    atur totalBelanjaan = totalBelanjaan + hargaBarang
+    atur jmlhBelanjaan = jmlhBelanjaan - 1
+Hentikan perulangan
+
+Jika diskon == True Maka
+    atur totalBelanjaan = totalBelanjaan - persenDiskon * totalBelanjaan
+Hentikan Perulangan
+
+Tampilkan "Total Belanjaan = " + totalBelanjaan
